@@ -6,4 +6,4 @@ Se trae información mediante API de https://live-score-api.com/
 
 En este proyecto se utilizó Charts.js para traer datos mediante la API y representarlo en los diferentes tipos de gráficas.
 
-[Imgur](https://i.imgur.com/WlnkvvF.png)
+![](https://i.imgur.com/WlnkvvF.png)
