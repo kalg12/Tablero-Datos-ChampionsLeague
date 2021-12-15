@@ -1,3 +1,5 @@
+import {getData, topScorers} from './requests.js';
+
 const ctx = document.getElementById('myChart').getContext('2d');
 
 export const myChart = new Chart(ctx, {
