@@ -22,10 +22,13 @@ getData();
 export function topScorers(objeto) {
     console.log(objeto.response[0].player.nationality);
     const h1 = document.querySelector('h3');
-    h1.innerHTML = `3er Goleador de la Premiere League: ${objeto.response[0].player.name}`;
-    alert("hola");
+    h1.innerHTML = `3er Goleador de la Premiere League: ${objeto.response[2].player.name}`;
 
+    let jugador1 = objeto.response[2].player.name;
+    console.log(jugador1);
 }
+
+
 
 /* 
 const token = 'a611bc23d6bd0a26109572836901c1764cbfb59b4251b6e8800030ad7245a78b';
