@@ -1,2 +1,3 @@
-import {myChart} from './chart.js';
-import {getData, topScorers} from './requests.js';
+import {createChart} from './chart.js';
+
+createChart();
