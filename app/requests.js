@@ -14,7 +14,7 @@ export async function getData() {
 	}
 })
     .then(response => response.json())
-    .then(resultado => {return topScorers, golesTotales (resultado);})
+    .then(resultado => {return topScorers /*, golesTotales */ (resultado);})
 }
 
 function topScorers(objeto) {
@@ -25,7 +25,7 @@ function topScorers(objeto) {
 
     return scorers;
 }
-
+/* 
 function golesTotales(objeto2) {
     let goals = [];
     for (let j = 0; j < 5; j++){
@@ -33,4 +33,4 @@ function golesTotales(objeto2) {
     }
 
     return goals;
-}
+} */

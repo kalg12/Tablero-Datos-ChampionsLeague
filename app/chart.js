@@ -16,7 +16,7 @@ const myChart = new Chart(ctx, {
         labels: [goleadores[0].name, goleadores[1].name, goleadores[2].name, goleadores[3].name, goleadores[4].name],
         datasets: [{
             label: '# de votos',
-            data: [goles[0].goals.total, 19, 3, 5, 2, 3],
+            data: [10, 19, 3, 5, 2, 3],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
