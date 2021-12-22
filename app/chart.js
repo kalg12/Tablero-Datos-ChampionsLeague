@@ -1,4 +1,5 @@
 import {getData} from './requests.js';
+import {getGoals} from './totalGoals.js';
 
 const ctx = document.getElementById('myChart').getContext('2d');
 
@@ -6,8 +7,7 @@ export async function createChart(){
 
 
 const goleadores = await getData();
-const goles = await getData();
-console.log(goles);
+const goles = await getGoals();
 
 const myChart = new Chart(ctx, {
     
@@ -15,8 +15,8 @@ const myChart = new Chart(ctx, {
     data: {
         labels: [goleadores[0].name, goleadores[1].name, goleadores[2].name, goleadores[3].name, goleadores[4].name],
         datasets: [{
-            label: '# de votos',
-            data: [10, 19, 3, 5, 2, 3],
+            label: '# de goles',
+            data: [goles[0].goals.total, goles[1].goals.total, goles[2].goals.total, goles[3].goals.total, goles[4].goals.total],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',

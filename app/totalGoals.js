@@ -5,7 +5,7 @@ const url = "https://api-football-v1.p.rapidapi.com/v3/";
 /* 
 Documentación https://rapidapi.com/api-sports/api/api-football/
  */
-export async function getData() {
+export async function getGoals() {
     return await fetch(`${url}players/topscorers?league=39&season=2021`, {
 	"method": "GET",
 	"headers": {
@@ -14,15 +14,14 @@ export async function getData() {
 	}
 })
     .then(response => response.json())
-    .then(resultado => {return topScorers(resultado);})
+    .then(resultado => {return getGoleadores(resultado);})
 }
 
-function topScorers(objeto) {
-    let scorers = [];
+function getGoleadores(objeto) {
+    let goals = [];
     for (let i = 0; i < 5; i++){
-        scorers.push(objeto.response[i].player)
+        goals.push(objeto.response[i].statistics[0])
     }
-
-    console.log(scorers);
-    return scorers;
+    console.log(goals);
+    return goals;
 }
